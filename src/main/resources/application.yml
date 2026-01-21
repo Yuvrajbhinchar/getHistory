@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: report
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/aigreentick_report
+    username: root
+    password: meenagaming12@#
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 20
+      idle-timeout: 30000
+      max-lifetime: 600000
+      connection-timeout: 30000
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    database-platform: org.hibernate.dialect.MySQLDialect
+    show-sql: false
+    open-in-view: false
